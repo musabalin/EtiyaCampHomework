@@ -19,7 +19,7 @@ public class CreditManager {
         this.credits = credits;
     }
 
-    public void getCreditList(Customer customer, double creditAmount,int year) {
+    public void getCreditList(Customer customer, double creditAmount, int year) {
 
       /*  if (credits.length < 1) {
             System.out.println("En az 1 Adet Kredi Seçmelisiniz.");
@@ -37,24 +37,13 @@ public class CreditManager {
         if (creditss.isEmpty()) {
             System.out.println("En az 1 Adet Kredi Seçmelisiniz.");
         } else {
-
-            if (customer.getJob() == "Officer") {
-
-                for (Credit credit : creditss
-                ) {
-                    System.out.println(customer.getFirstName() + " ");
-                    credit.calculate(creditAmount,year);
-                }
-            } else {
-                for (Credit credit : creditss
-                ) {
-                    System.out.println(customer.getFirstName() + " ");
-                    credit.calculate(creditAmount,year);
-                }
-
+            for (Credit credit : creditss
+            ) {
+                System.out.println(customer.getFirstName() + " ");
+                credit.calculate(creditAmount, year);
             }
+
         }
-
-
     }
 }
+
